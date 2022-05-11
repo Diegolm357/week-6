@@ -4,7 +4,7 @@ import styles from '../styles/Home.module.css'
 import prisma from '../lib/prisma'
 export default function Home({
   cars}) {
-    async function agregar(){
+    async function add(){
       return 
 let  cart = await prisma.car.create({
       data: {
@@ -19,7 +19,7 @@ let  cart = await prisma.car.create({
 
   return (
     <div className={styles.container}>
-    <button onClick={agregar() }></button>
+    <button onClick={add() }>add</button>
     <ul>
       {cars.map((car, ind)=>{return(
 <li key={ind}>
